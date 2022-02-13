@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    nb enreg : {{produits|length}}
+    <table align=center border=1>
+        <tr><th>Identifiant</th><th>Libelle</th><th>Description</th><th>prix</th><th>Fournisseur</th></tr>
+        {% for p in produits %}
+            <tr>
+            <td align=center>{{p.id}}</td>
+            <td>{{p.libelle}}</td>
+            <td>{{p.description}}</td>
+            <td>{{p.prix}}</td>
+            <td>{{p.fournisseur}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
